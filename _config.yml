@@ -8,4 +8,4 @@ defaults:
       type: "authors"
     values:
       layout: "author"
-remote_theme: minimal-mistakes-jekyll
+remote_theme: mmistakes/minimal-mistakes
