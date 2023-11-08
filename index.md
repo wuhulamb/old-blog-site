@@ -1,5 +1,6 @@
 ---
-author: wuhulamb
-date: 2023-11-08 14:12
+layout: default
+title: Home
 ---
-hello, this is my personal blog site
+<h1>{{ "Hello World!" | downcase }}</h1>
+<h1>Hello Linux!</h1>

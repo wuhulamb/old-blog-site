@@ -1,0 +1,11 @@
+collections:
+  authors:
+    output: true
+
+defaults:
+  - scope:
+      path: ""
+      type: "authors"
+    values:
+      layout: "author"
+remote_theme: minimal-mistakes-jekyll
