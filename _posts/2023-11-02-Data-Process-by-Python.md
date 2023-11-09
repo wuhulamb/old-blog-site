@@ -1,9 +1,10 @@
 ---
-layout: post
 author: wuhulamb
 date: 2023-11-02 18:53
 place: 兰大，榆中，教室
 ---
+一个整理每日到课率程序的使用说明
+<!--more-->
 
 ## 写给谁
 

@@ -4,4 +4,8 @@ title: About
 ---
 # About page
 
-This page tells you a little bit about me.
+This site is a muti-person blog site.
+
+We are students from Lanzhou university.
+
+And we write intersting things here!
