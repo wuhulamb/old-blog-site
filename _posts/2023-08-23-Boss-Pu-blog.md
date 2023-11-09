@@ -1,6 +1,5 @@
 ---
-layout: post
-author: PPhome
+author: PPhome..
 ---
 
 Test
