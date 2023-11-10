@@ -1,4 +1,4 @@
-title: Little One
+title: wuhulamb
 description: 记录·分享·表达
 excerpt_separator: <!--more-->
 collections:
@@ -6,11 +6,6 @@ collections:
     output: true
 
 defaults:
-  - scope:
-      path: ""
-      type: "authors"
-    values:
-      layout: "author"
   - scope:
       path: ""
       type: "posts"
