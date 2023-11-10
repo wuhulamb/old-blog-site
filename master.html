@@ -9,7 +9,7 @@ title: Master
     <li>
       <h2><a href="{{ author.url }}">{{ author.nickname }}</a></h2>
       <h3>{{ author.home }}</h3>
-      <p>{{ author.content | markdownify }}</p>
+      <p>{{ author.excerpt | markdownify }}</p>
     </li>
   {% endfor %}
 </ul>
