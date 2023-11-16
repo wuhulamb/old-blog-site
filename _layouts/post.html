@@ -2,4 +2,11 @@
 layout: default
 ---
 
+<h1>{{ page.title }}</h1>
 
+<p class="view">
+  <span><small>{{ page.date | date: "%F" }}</small></span>
+  <span>by {{ page.author }}</span>
+</p>
+
+{{content}}
