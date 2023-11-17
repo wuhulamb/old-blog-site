@@ -17,6 +17,10 @@ place: 兰大，榆中，教室
 - 制作每日到课率表
 - 制作异常情况表+截图重命名
 
+## 代码下载
+- [nor-make.py](/media/download/nor-make.py)
+- [art-make.py](/media/download/art-make.py)
+
 ## 开始使用
 
 ### 1. 数据准备
