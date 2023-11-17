@@ -1,5 +1,10 @@
-title: wuhulamb
-description: 记录·分享·表达
+title: Little One
+author:
+  name: wuhulamb
+  email: wuhulamb@qq.com
+description: >
+  记录·分享·表达
+show_excerpts: true
 excerpt_separator: <!--more-->
 
 defaults:
@@ -8,6 +13,11 @@ defaults:
       type: "posts"
     values:
       layout: "post"
-remote_theme: pages-themes/hacker@v0.2.0
+remote_theme: jekyll/minima
 plugins:
-- jekyll-remote-theme # add this line to the plugins list if you already have one
+  - jekyll-feed
+  - jekyll-seo-tag
+
+minima:
+  social_links:
+    - { platform: github,         user_url: "https://github.com/wuhulamb" }

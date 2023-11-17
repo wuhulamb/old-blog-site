@@ -1,6 +1,7 @@
 ---
+# Only the main Sass file needs front matter (the dashes are enough)
 ---
 
-@import "jekyll-theme-hacker";
-footer#footer { margin: 60px 0; }
-.post-meta { font-size: 14px; color: #828282; }
+@import
+  "minima/skins/{{ site.minima.skin | default: 'classic' }}",
+  "minima/initialize";
