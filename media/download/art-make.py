@@ -128,7 +128,7 @@ if __name__ == '__main__':
     ''')
     check_pth = input('请输入闻韶楼数据表（表头+内容）：')
     office_pth = input('请输入办公室助理的异常表：')
-    save_pth = input(r'请输入生成文件路径（eg. D:\xxx\xxx，按回车直接生成在程序所在文件夹）：')
+    save_pth = input(r'请输入生成文件路径（eg. D:\xxx\xxx，按回车直接生成在当前工作路径）：')
 
     check_pth = '/'.join(check_pth.split('\\'))
     office_pth = '/'.join(office_pth.split('\\'))
