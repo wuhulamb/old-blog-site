@@ -18,6 +18,10 @@ plugins:
   - jekyll-feed
   - jekyll-seo-tag
 
+header_pages:
+  - think.md
+  - about.md
+
 minima:
   social_links:
     - { platform: github,         user_url: "https://github.com/wuhulamb" }
