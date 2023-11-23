@@ -1,9 +1,9 @@
 ---
-title: "每日到课率整理@Python"
-author: wuhulamb
-date: 2023-11-02 18:53:00 +0800
-modified_date: 2023-11-21 15:30:00 +0800
-place: 兰大，榆中，教室
+title:            "每日到课率整理@Python"
+author:           wuhulamb
+date:             2023-11-02 18:53:00 +0800
+modified_date:    2023-11-21 15:30:00 +0800
+place:            兰大，榆中，教室
 ---
 一个整理每日到课率程序的使用说明
 <!--more-->

@@ -4,6 +4,7 @@ author:
   email: wuhulamb@qq.com
 description: >
   记录·分享·表达
+timezone: Asia/Shanghai
 show_excerpts: true
 excerpt_separator: <!--more-->
 
