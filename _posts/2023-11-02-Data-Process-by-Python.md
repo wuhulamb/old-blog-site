@@ -46,8 +46,10 @@ place:            兰大，榆中，教室
     └── 秦岭堂                        # 目录结构同天山堂
 
 截图示例（**./** 表示当前目录，使用相对路径）
-| ![data-env1.png](/media/image/2023/11/data-env1.png "environment") **./** | ![data-env2.png](/media/image/2023/11/data-env2.png "environment") **./天山堂/** |
+
+| 路径示例 | 路径示例 |
 | :---: | :---: |
+| ![data-env1.png](/media/image/2023/11/data-env1.png "environment") **./** | ![data-env2.png](/media/image/2023/11/data-env2.png "environment") **./天山堂/** |
 | ![data-env3.png](/media/image/2023/11/data-env3.png "environment") **./天山堂/第7周/** | ![data-env4.png](/media/image/2023/11/data-env4.png "environment") **./天山堂/第7周/周二/** |
 | ![data-env5.png](/media/image/2023/11/data-env5.png "environment") **./天山堂/第7周/周二/7-8节/** |
 
@@ -109,8 +111,10 @@ place:            兰大，榆中，教室
         ├── 20231017天山堂截图2.JPG
         └── 20231017天山堂截图3.JPG  
 
-| ![result1.png](/media/image/2023/11/result1.png "result") **生成总文件夹** | ![result3.png](/media/image/2023/11/result3.png "result") **每日到课率表** |
+
+| 路径示例 | 表格内容 |
 | :---: | :---: |
+| ![result1.png](/media/image/2023/11/result1.png "result") **生成总文件夹** | ![result3.png](/media/image/2023/11/result3.png "result") **每日到课率表** |
 | ![result2.png](/media/image/2023/11/result2.png "result") **到课率表 + 截图文件夹** | ![result5.png](/media/image/2023/11/result5.png "result") **异常情况表** |
 | ![result4.png](/media/image/2023/11/result4.png "result") **异常情况表 + 截图** | |
 
