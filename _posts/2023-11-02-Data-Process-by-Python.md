@@ -2,7 +2,7 @@
 title:            "每日到课率整理@Python"
 author:           wuhulamb
 date:             2023-11-02 18:53:00 +0800
-modified_date:    2023-11-21 15:30:00 +0800
+modified_date:    2023-11-27 22:45:00 +0800
 place:            兰大，榆中，教室
 ---
 一个整理每日到课率程序的使用说明
@@ -45,20 +45,11 @@ place:            兰大，榆中，教室
     │       └── 周二                  # 【命名】今天的截图，目录结构同周一（可以多不能少，例如可以有晚上9-11节的截图）
     └── 秦岭堂                        # 目录结构同天山堂
 
-**./**
-![data-env1.png](/media/image/2023/11/data-env1.png "environment")
-
-**./天山堂**
-![data-env2.png](/media/image/2023/11/data-env2.png "environment")
-
-**./天山堂/第7周**
-![data-env3.png](/media/image/2023/11/data-env3.png "environment")
-
-**./天山堂/第7周/周二**
-![data-env4.png](/media/image/2023/11/data-env4.png "environment")
-
-**./天山堂/第7周/周二/7-8节**
-![data-env5.png](/media/image/2023/11/data-env5.png "environment")
+截图示例（**./** 表示当前目录，使用相对路径）
+| ![data-env1.png](/media/image/2023/11/data-env1.png "environment") **./** | ![data-env2.png](/media/image/2023/11/data-env2.png "environment") **./天山堂/** |
+| :---: | :---: |
+| ![data-env3.png](/media/image/2023/11/data-env3.png "environment") **./天山堂/第7周/** | ![data-env4.png](/media/image/2023/11/data-env4.png "environment") **./天山堂/第7周/周二/** |
+| ![data-env5.png](/media/image/2023/11/data-env5.png "environment") **./天山堂/第7周/周二/7-8节/** |
 
 #### （2）到课率原始数据【查课同学】
 只保留**小表头** + **今天要处理的数据**（eg. 周二9-11+周三1-8），建议**按行复制**，不要遗漏备注，最后另存为新表，数据存入**新表的第一个sheet**中
@@ -108,21 +99,29 @@ place:            兰大，榆中，教室
 
 
 ### 5. 见证奇迹
-**生成文件夹**
-![result1.png](/media/image/2023/11/result1.png "result")
+示例
 
-**每日到课率表+异常情况截图**
-![result2.png](/media/image/2023/11/result2.png "result")
+    20231017天山堂                                              # 文件夹
+    ├── 天山堂10月17日学生到课情况统计表.xlsx                     # 到课率表
+    └── 10月17日榆中校区截图                                     # 文件夹
+        ├── 天山堂2023秋季学期异常课堂截图记录（20231017）.xlsx    # 异常情况表
+        ├── 20231017天山堂截图1.JPG                              # 截图
+        ├── 20231017天山堂截图2.JPG
+        └── 20231017天山堂截图3.JPG  
 
-**每日到课率表**
-![result3.png](/media/image/2023/11/result3.png "result")
+| ![result1.png](/media/image/2023/11/result1.png "result") **生成总文件夹** | ![result3.png](/media/image/2023/11/result3.png "result") **每日到课率表** |
+| :---: | :---: |
+| ![result2.png](/media/image/2023/11/result2.png "result") **到课率表 + 截图文件夹** | ![result5.png](/media/image/2023/11/result5.png "result") **异常情况表** |
+| ![result4.png](/media/image/2023/11/result4.png "result") **异常情况表 + 截图** | |
 
-**截图 + 异常情况表**
-![result4.png](/media/image/2023/11/result4.png "result")
-
-**异常情况表**
-![result5.png](/media/image/2023/11/result5.png "result")
-
-## 常见问题
+## 程序跑不了
 - 原始查课数据未经选择直接丢给程序 【处理方法见[数据准备（2）](#2到课率原始数据查课同学)】
 - 原始查课数据中到课人数存在空值 【此时需要赋值为0】
+
+## 程序跑完后
+重点是**每日到课率表**
+- 加入大表头（**仔细仔细再仔细**）
+- 调格式（**字体**，**行高**，**表头加粗**）
+- 到课率低于70%标黄
+- 调整最后一列备注
+- 最后一行加入**备注说明**
