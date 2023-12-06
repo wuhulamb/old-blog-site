@@ -1,5 +1,19 @@
 // Placeholder to allow defining custom styles that override everything else.
 // (Use `_sass/minima/custom-variables.scss` to override variable defaults)
+.footer {
+    padding: 0.5em;
+    text-align: center;
+    line-height: 1em;
+}
+
+.footer-inner {
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    font-size: 100%;
+    color: hsla(240, 1%, 48%, 0.8)
+}
+
 .socials {
     padding: 0;
     margin: 0;
@@ -8,17 +22,9 @@
 
 .socials-item {
     display: inline-block;
-    margin: 0.2em;
-    border-radius: 50%;
-    background-color: var(--color-contrast-medium);
-    transition: background-color .5s
-}
-
-.socials-item:hover {
-    background-color: var(--color-primary)
+    margin: 0em 0.5em;
 }
 
 .social-icon {
-    fill: var(--color-bg);
-    padding: 0.5em
+    padding: 0em 0.5em
 }
