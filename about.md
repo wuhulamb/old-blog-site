@@ -16,4 +16,6 @@ title: About
 - 会一点 `Python`
 - 喜欢**王小波**、**三毛**的书
 - 喜欢Richard Feynman、Steve Jobs
-- 喜欢的电影有*Pirates of the Caribbean*
+- 喜欢的电影有 *Pirates of the Caribbean*
+- 喜欢的书有 *《不能承受的生命之轻》*
+- 喜欢的音乐有 *[Experience](https://music.163.com/#/song?id=1966101009)*
