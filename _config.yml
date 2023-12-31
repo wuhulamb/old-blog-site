@@ -20,7 +20,7 @@ plugins:
   - jekyll-seo-tag
 
 header_pages:
-  - think.md
+  - like.md
   - about.md
 
 minima:
