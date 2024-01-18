@@ -2,6 +2,7 @@
 title:            "阿喀琉斯与西西弗斯"
 author:           wuhulamb
 date:             2024-01-05 21:25:00 +0800
+category:         "废话篓子"
 ---
 神话之思与哲学之维期末作业
 <!--more-->

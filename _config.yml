@@ -8,21 +8,29 @@ timezone: Asia/Shanghai
 show_excerpts: true
 excerpt_separator: <!--more-->
 
+collections:
+  categories:
+    output: true
+
 defaults:
   - scope:
       path: ""
       type: "posts"
     values:
       layout: "post"
+  - scope:
+      path: ""
+      type: "categories"
+    values:
+      layout: "category"
+
+
 remote_theme: jekyll/minima
 plugins:
   - jekyll-feed
   - jekyll-seo-tag
 
 header_pages:
-  - like.md
+  - category.md
+  - motto.md
   - about.md
-
-minima:
-  social_links:
-    - { platform: github,         user_url: "https://github.com/wuhulamb" }

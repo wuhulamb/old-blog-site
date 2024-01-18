@@ -3,6 +3,7 @@ title:            "每日到课率整理@Python"
 author:           wuhulamb
 date:             2023-11-02 18:53:00 +0800
 modified_date:    2023-12-31 21:38:00 +0800
+category:         "教务处勤工助学"
 ---
 一个兑现了的诺言
 <!--more-->
