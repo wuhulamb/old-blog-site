@@ -20,12 +20,15 @@ layout: base
           {{ page.modified_date | date: date_format }}
         </time>
       {%- endif -%}
-      {%- if page.author -%}
-        | {% for author in page.author %}
-          <span itemprop="author" itemscope itemtype="http://schema.org/Person">
-            <span class="p-author h-card" itemprop="name">{{ author }}</span></span>
-            {%- if forloop.last == false %}, {% endif -%}
+      {%- if page.category -%}
+        {% for c in site.categories %}
+          {%- if c.title == page.category -%}
+            {% assign category_url = c.url %}
+          {%- endif -%}
         {% endfor %}
+        |
+        <span class="p-category"><i class="far fa-folder"></i></span>
+        <span class="p-category"><a href="{{ category_url | relative_url }}">{{ page.category }}</a></span>
       {%- endif -%}</p>
   </header>
 
