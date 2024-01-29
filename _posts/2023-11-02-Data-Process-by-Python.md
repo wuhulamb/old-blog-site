@@ -20,7 +20,7 @@ category:         "教务处勤工助学"
 - [nor-make.py](/media/download/nor-make.py)
 - [art-make.py](/media/download/art-make.py)
 
-> [!NOTE]
+> **注意**
 > 1. 本代码运行的Python版本为3.8.8，至少保证您的Python版本为3.x
 > 2. 需要安装的库:
 >     - [numpy](https://pypi.org/project/numpy/)
