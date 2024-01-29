@@ -5,7 +5,6 @@ date:             2024-01-05 21:25:00 +0800
 category:         "废话篓子"
 ---
 神话之思与哲学之维期末作业
-<!--more-->
 
 ![Achilles-and-Sisyphus.jpg](/media/image/2024/1/Achilles-and-Sisyphus.jpg "Achilles-and-Sisyphus")
 
