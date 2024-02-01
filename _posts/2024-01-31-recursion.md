@@ -2,6 +2,7 @@
 title:            "递归算法"
 author:           wuhulamb
 date:             2024-01-31 17:30:00 +0800
+modified_date:    2024-02-01 11:29:00 +0800
 category:         "算法"
 ---
 ## 初识
@@ -52,7 +53,7 @@ def permutation(data: list, n: int) -> list:
                     temp.append(m)
                 result.append(temp)            # temp就是一个完整的排列了
         else:                                  # n = 1，即从列表元素中挑一个元素排的情况
-            result.append(i)
+            result.append([i])                 # !WARNING 此处是[i]，不是i，因为result里的每一个元素都是一种排列的方案 ，即temp列表
     return result
 ```
 
@@ -84,8 +85,6 @@ def permutation(data: list, n: int) -> list:
 
 如果体会不深，可以玩一下:point_right: [汉诺塔游戏](https://www.saolei.games/h.html)
 
----
-
 ## 答案
 
 ### 练习1
@@ -106,7 +105,7 @@ def combination(data: list, n: int) -> list:
                     temp.append(m)
                 result.append(temp)
         else:
-            result.append(i)
+            result.append([i])
     return result
 ```
 
@@ -134,3 +133,7 @@ def hannoi(n: int, start: str, middle: str, goal: str) -> list:      # n为start
 **思考**：
 1. 汉诺塔问题的最优解（即通过最少的步骤来实现）是什么？需要多少步？具体实现步骤？
 2. 除了递归，是否存在其他办法解决汉诺塔问题？（提示：迭代）
+
+## 致谢
+
+感谢pzm对本篇博客的仔细审阅。她发现了代码中的一处关键问题，并努力地尝试解决它！
