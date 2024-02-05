@@ -6,7 +6,7 @@ category:         "废话篓子"
 ---
 神话之思与哲学之维期末作业
 
-![Achilles-and-Sisyphus.jpg](/media/image/2024/1/Achilles-and-Sisyphus.jpg "Achilles-and-Sisyphus")
+![Achilles-and-Sisyphus.jpg](/media/image/2024/01/Achilles-and-Sisyphus.jpg "Achilles-and-Sisyphus")
 
 阿喀琉斯是一位善战者，在著名的特洛伊战争中，赢得了属于自己的荣耀；触犯了众神的西西弗斯受到宙斯的惩罚，周而复始地将一块巨石推向山顶，而每当接近顶峰时，巨石就会从手中滑落。一个是享有世世代代为无数人所赞誉的伟大，一个是在被遗忘角落里看不见的微小；一个是充满意义的使命，一个是毫无意义的重复。两人命运的差距是如此之大，年轻的我将阿喀琉斯视为偶像，西西弗斯则遗忘在了角落。
 
