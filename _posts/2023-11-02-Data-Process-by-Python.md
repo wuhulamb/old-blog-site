@@ -5,6 +5,9 @@ date:             2023-11-02 18:53:00 +0800
 modified_date:    2023-12-31 21:38:00 +0800
 category:         "教务处勤工助学"
 ---
+
+> 本代码也适用于节假日等特殊情况，只需要保证输入的到课率数据为对应时间段的数据（eg. 昨天9-11节+今天1-8节）。
+
 ## 写给谁
 
 - 需要使用该程序进行数据处理的小伙伴
@@ -64,7 +67,7 @@ category:         "教务处勤工助学"
 
 只保留**小表头** + **今天要处理的数据**（eg. 周二9-11+周三1-8），建议**按行复制**，不要遗漏备注，最后另存为新表，数据存入**新表的第一个sheet**中
 
-![original-data.png](/media/image/2023/11/original-data.png)
+![original-data.png](/media/image/2023/11/original-data.png)  
 *此处以秦岭堂为例，天山堂、闻韶楼同理*
 
 #### （3）异常情况记录备案【办公室助理】
@@ -91,7 +94,7 @@ category:         "教务处勤工助学"
 
     python D:\xxx\xxx\nor-make.py  # 运行程序（后面为nor-make.py文件所在路径）
 
-![nor-make-start.png](/media/image/2023/11/nor-make-start.png "start")
+![nor-make-start.png](/media/image/2023/11/nor-make-start.png "start")  
 *此处以nor-make.py为例，art-make.py同理*
 
 ### 3. 输入选项
@@ -102,15 +105,15 @@ category:         "教务处勤工助学"
 - 第四项：截图文件夹路径【详见[数据准备（4）](#4截图)】
 - 第五项：生成文件路径，即文件输出位置
 
-![nor-make-input.png](/media/image/2023/11/nor-make-input.png "input")
+![nor-make-input.png](/media/image/2023/11/nor-make-input.png "input")  
 *输入概览*
 
 ### 4. 打印输出（用作检查）
 
-**输出**
+**输出**  
 ![nor-make-report1.png](/media/image/2023/11/nor-make-report1.png "report")
 
-**and another 输出**
+**and another 输出**  
 ![nor-make-report2.png](/media/image/2023/11/nor-make-report2.png "report")
 
 
