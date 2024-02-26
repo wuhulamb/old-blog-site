@@ -1,4 +1,4 @@
-# Python3.8.8
+# C:\Users\xsy\AppData\Local\Programs\Python\Python38\python.exe
 # -*- Coding: UTF-8 -*-
 # CreateDate: 2023-10-18 12:53
 # Author: wuhulamb
@@ -6,8 +6,8 @@ import datetime
 import pandas as pd
 
 # 一些重要的默认值
-crtyear = 2023                       # 当前的年份
-week1m, week1d, week1y = 9, 3, 2023  # 当前学期的第一周的第一天
+crtyear = 2024                       # 当前的年份
+week1m, week1d, week1y = 2, 25, 2024  # 当前学期的第一周的第一天
 
 m, d, y = datetime.date.today().strftime('%m-%d-%Y').split('-')
 m, d, y = int(m), int(d), int(y)
@@ -128,7 +128,7 @@ if __name__ == '__main__':
     ''')
     check_pth = input('请输入闻韶楼数据表（表头+内容）：')
     office_pth = input('请输入办公室助理的异常表：')
-    save_pth = input(r'请输入生成文件路径（eg. D:\xxx\xxx，按回车直接生成在当前工作路径）：')
+    save_pth = input(r'请输入生成文件路径（eg. D:\xxx\xxx，按回车直接生成在程序所在文件夹）：')
 
     check_pth = '/'.join(check_pth.split('\\'))
     office_pth = '/'.join(office_pth.split('\\'))

@@ -1,4 +1,4 @@
-# Python3.8.8
+# C:\Users\xsy\AppData\Local\Programs\Python\Python38\python.exe
 # -*- Coding: UTF-8 -*-
 # CreateDate: 2023-09-29 14:08
 # Author: wuhulamb
@@ -9,8 +9,8 @@ import numpy as np
 import pandas as pd
 
 # 一些重要的默认值
-crtyear = 2023                       # 当前的年份
-week1m, week1d, week1y = 9, 3, 2023  # 当前学期的第一周的第一天
+crtyear = 2024                       # 当前的年份
+week1m, week1d, week1y = 2, 25, 2024  # 当前学期的第一周的第一天
 # old_grade = '2020'                   # 大四年级
 
 m, d, y = datetime.date.today().strftime('%m-%d-%Y').split('-')
