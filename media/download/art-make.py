@@ -1,4 +1,4 @@
-# C:\Users\xsy\AppData\Local\Programs\Python\Python38\python.exe
+# Python 3.8.8
 # -*- Coding: UTF-8 -*-
 # CreateDate: 2023-10-18 12:53
 # Author: wuhulamb
