@@ -10,14 +10,14 @@ layout: base
       <span class="dt-published"><i class="far fa-calendar"></i></span>
       <span class="dt-published">Published: </span>
       <time title="创建时间：{{ page.date }}" class="dt-published" datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">
-        {{ page.date | date: date_format }}
+        {{ page.date | date: "%F" }}
       </time>
       {%- if page.modified_date -%}
         | 
         <span class="dt-modified"><i class="far fa-calendar-check"></i></span>
         <span class="dt-modified">Updated: </span>
         <time title="修改时间：{{ page.modified_date }}" class="dt-modified" datetime="{{ page.modified_date | date_to_xmlschema }}" itemprop="dateModified">
-          {{ page.modified_date | date: date_format }}
+          {{ page.modified_date | date: "%F" }}
         </time>
       {%- endif -%}
       {%- if page.category -%}
@@ -28,6 +28,7 @@ layout: base
         {% endfor %}
         |
         <span class="p-category"><i class="far fa-folder"></i></span>
+        <span class="p-category">Classified: </span>
         <span class="p-category"><a href="{{ category_url | relative_url }}">{{ page.category }}</a></span>
       {%- endif -%}</p>
   </header>
