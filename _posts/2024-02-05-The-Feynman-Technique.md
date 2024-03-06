@@ -2,7 +2,7 @@
 title:            "译：费曼学习法"
 author:           wuhulamb
 date:             2024-02-05 11:26:00 +0800
-category:         "翻译"
+my_category:         "翻译"
 ---
 ## 翻译
 

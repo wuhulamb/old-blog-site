@@ -6,7 +6,7 @@ title:  "分类"
 {% for c in site.categories %}
   {% assign my_counter = 0 %}
   {% for p in site.posts %}
-    {%- if p.category == c.title -%}
+    {%- if p.my_category == c.title -%}
       {% assign my_counter = my_counter | plus: 1 %}
     {%- endif -%}
   {% endfor %}
