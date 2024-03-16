@@ -2,7 +2,7 @@
 title:            "王小波-《爱你就像爱生命》-「真正的婚姻全是在天上缔结的」"
 author:           wuhulamb
 date:             2024-02-25 10:10:00 +0800
-my_category:         "有趣之文"
+my_category:      "吾爱阅读"
 ---
 
 你好，李银河！
