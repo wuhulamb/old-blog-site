@@ -2,6 +2,7 @@
 # -*- Coding: UTF-8 -*-
 # CreateDate: 2023-10-18 12:53
 # Author: wuhulamb
+import sys
 import datetime
 import pandas as pd
 
@@ -18,6 +19,7 @@ data["序号"] = []
 data["课程名称"] = []
 data["开课院系"] = []
 data["课程号"] = []
+data["课序号"] = []
 data["选课人数"] = []
 data["选课属性"] = []
 data["主讲教师姓名"] = []
@@ -118,7 +120,9 @@ if __name__ == '__main__':
                                                                           
     
     ''')
-    
+    if tozero(m, d, y) - tozero(week1m, week1d, week1y) > 150:
+        print('请更新程序中开学第一周第一天的具体日期')
+        sys.exit(1)
     print('''
     [NOTICE]
      * 原始到课数据的条数一定要保证无误
@@ -137,10 +141,6 @@ if __name__ == '__main__':
     weekToday = weekday(m, d, y)
     weekYesterday = weekday(lastm, lastd, lasty)
 
-    #if weekToday == 5:
-    #    classNumber = '1-11节'
-    #else:
-    #    classNumber = '1-8节'
 
     print('\n到课率表：\n')
     # print("【出现报错】（problem['教室情况（详细阐述）'].append(info_data.strip())）\n则数据表里查课同学无备注but异常表办公室助理有备注\n")
@@ -184,6 +184,8 @@ if __name__ == '__main__':
             if hdr_data[k] == '开课院系':
                 data[hdr_data[k]].append(j)
             if hdr_data[k] == '课程号':
+                data[hdr_data[k]].append(str(j))
+            if hdr_data[k] == '课序号':
                 data[hdr_data[k]].append(str(j))
             if hdr_data[k] == '选课属性':
                 data[hdr_data[k]].append(j)

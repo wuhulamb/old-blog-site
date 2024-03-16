@@ -2,6 +2,7 @@
 # -*- Coding: UTF-8 -*-
 # CreateDate: 2023-09-29 14:08
 # Author: wuhulamb
+import sys
 import os
 import re
 import datetime
@@ -22,6 +23,7 @@ data["序号"] = []
 data["课程名称"] = []
 data["开课院系"] = []
 data["课程号"] = []
+data["课序号"] = []
 data["选课人数"] = []
 data["选课属性"] = []
 data["主讲教师姓名"] = []
@@ -48,6 +50,7 @@ problem["序号"] = []
 problem["课程名称"] = []
 problem["开课院系"] = []
 problem["课程号"] = []
+problem["课序号"] = []
 problem["主讲教师姓名"] = []
 problem["周次分布"] = []
 problem["具体周次"] = []
@@ -121,6 +124,7 @@ def problem_fill(num):
     problem['课程名称'].append(data['课程名称'][-1])
     problem['开课院系'].append(data['开课院系'][-1])
     problem['课程号'].append(data['课程号'][-1])
+    problem['课序号'].append(data['课序号'][-1])
     problem['主讲教师姓名'].append(data['主讲教师姓名'][-1])
     problem['周次分布'].append(data['周次分布'][-1])
     problem['具体周次'].append(whichweek(m, d, y))
@@ -157,7 +161,9 @@ if __name__ == '__main__':
                                                                           
     
     ''')
-    
+    if tozero(m, d, y) - tozero(week1m, week1d, week1y) > 150:
+        print('请更新程序中开学第一周第一天的具体日期')
+        sys.exit(1)
     print('''
     [NOTICE]
      * 原始到课数据的条数一定要保证无误
@@ -182,10 +188,6 @@ if __name__ == '__main__':
     weekday2str = {0: "周日", 1: "周一", 2: "周二", 3: "周三", 4: "周四", 5: "周五", 6: "周六"}
     weekNum2Str = {1: "第一周", 2: "第二周", 3: "第三周", 4: "第四周", 5: "第五周", 6: "第六周", 7: "第七周", 8: "第八周", 9: "第九周", 10: "第十周", 11: "第十一周", 12: "第十二周", 13: "第十三周", 14: "第十四周", 15: "第十五周", 16: "第十六周", 17: "第十七周", 18: "第十八周", 19: "第十九周", 20: "第二十周",}
     
-    #if weekToday == 5:
-    #    classNumber = '1-11节'
-    #else:
-    #    classNumber = '1-8节'
 
     print('\n到课率表+异常表：\n')
     # print("【出现报错】（problem['教室情况（详细阐述）'].append(info_data.strip())）\n则数据表里查课同学无备注but异常表办公室助理有备注\n")
@@ -238,6 +240,8 @@ if __name__ == '__main__':
                 data[hdr_data[k]].append(j)
             if hdr_data[k] == '课程号':
                 data[hdr_data[k]].append(str(j))
+            if hdr_data[k] == '课序号':
+                data[hdr_data[k]].append(str(j))
             if hdr_data[k] == '选课属性':
                 data[hdr_data[k]].append(j)
             if hdr_data[k] == '主讲教师姓名':
@@ -250,7 +254,7 @@ if __name__ == '__main__':
                 data[hdr_data[k]].append(j)
 
 
-            if k == 21:                              # info_data查课同学备注
+            if k == 22:                              # info_data查课同学备注
                 info_data = j
         data['到课人数'].append(maxhum)               # int
         if maxhum / selhum > 1:                      # 到课率超过1改为1
