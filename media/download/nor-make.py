@@ -195,7 +195,7 @@ if __name__ == '__main__':
     wb_office = pd.read_excel(office_pth, header=None)
 
     issue = {}
-    hdr_issue = {}
+    hdr_issue = {}   # 办公室助理异常表
     for k, foo in enumerate(wb_office.values[1]):
         if k < 14:
             hdr_issue[k] = foo
@@ -254,7 +254,7 @@ if __name__ == '__main__':
                 data[hdr_data[k]].append(j)
 
 
-            if k == 22:                              # info_data查课同学备注
+            if k == 22:                              # info_data查课同学备注，如果表头更改此处也需要更改
                 info_data = j
         data['到课人数'].append(maxhum)               # int
         if maxhum / selhum > 1:                      # 到课率超过1改为1
@@ -359,6 +359,9 @@ if __name__ == '__main__':
     data_df = pd.DataFrame(data)
     problem_df = pd.DataFrame(problem)
 
+    hdr_data_df = {}   # 表头:列序号 这样就算改变到课率结构 也不会影响后面合班问题修正
+    for k, foo in enumerate(data_df.columns.values):
+        hdr_data_df[foo] = k
     # 合班问题修正
     print('\n合班问题修正：')
     for _ in day:
@@ -376,22 +379,22 @@ if __name__ == '__main__':
                                 right_rate = 1
                                 print(f'合班到课率超过1，已重新赋值为1：')
                             for t in special.values:
-                                if abs(right_rate - t[16]) > 0.0001:
-                                    data_df.loc[(data_df['序号'] == t[0]) & (data_df['具体日期'] == t[11]), '到课率'] = right_rate
-                                    print(f'【合班（到课率已修正）| 查课同学记录多个值and不同值差别大】 序号{t[0]} {t[11]} {t[13]} {t[14]} 选课{t[4]} 到课{t[15]} 合到课率{right_rate} 课程：{t[1]}')
+                                if abs(right_rate - t[hdr_data_df['到课率']]) > 0.0001:
+                                    data_df.loc[(data_df['序号'] == t[hdr_data_df['序号']]) & (data_df['具体日期'] == t[hdr_data_df['具体日期']]), '到课率'] = right_rate
+                                    print(f'【合班（到课率已修正）| 查课同学记录多个值and不同值差别大】 序号{t[hdr_data_df["序号"]]} {t[hdr_data_df["具体日期"]]} {t[hdr_data_df["节次"]]} {t[hdr_data_df["教室"]]} 选课{t[hdr_data_df["选课人数"]]} 到课{t[hdr_data_df["到课人数"]]} 合到课率{right_rate} 课程：{t[hdr_data_df["课程名称"]]}')
                                 else:
-                                    print(f'【合班（合到课率=分到课率）| 查课同学记录多个值and不同值差别大】 序号{t[0]} {t[11]} {t[13]} {t[14]} 选课{t[4]} 到课{t[15]} 合到课率{right_rate} 课程：{t[1]}')
+                                    print(f'【合班（合到课率=分到课率）| 查课同学记录多个值and不同值差别大】 序号{t[hdr_data_df["序号"]]} {t[hdr_data_df["具体日期"]]} {t[hdr_data_df["节次"]]} {t[hdr_data_df["教室"]]} 选课{t[hdr_data_df["选课人数"]]} 到课{t[hdr_data_df["到课人数"]]} 合到课率{right_rate} 课程：{t[hdr_data_df["课程名称"]]}')
                         else:
                             right_rate = max(tosum) / sum([int(p) for p in special["选课人数"].values])
                             if right_rate > 1:
                                 right_rate = 1
                                 print('合班到课率超过1，已重新赋值为1：')
                             for t in special.values:
-                                if abs(right_rate - t[16]) > 0.0001:
-                                    data_df.loc[(data_df['序号'] == t[0]) & (data_df['具体日期'] == t[11]), '到课率'] = right_rate
-                                    print(f'【合班（到课率已修正）| 查课同学记录多个值and不同值差别小】 序号{t[0]} {t[11]} {t[13]} {t[14]} 选课{t[4]} 到课{t[15]} 合到课率{right_rate} 课程：{t[1]}')
+                                if abs(right_rate - t[hdr_data_df['到课率']]) > 0.0001:
+                                    data_df.loc[(data_df['序号'] == t[hdr_data_df['序号']]) & (data_df['具体日期'] == t[hdr_data_df['具体日期']]), '到课率'] = right_rate
+                                    print(f'【合班（到课率已修正）| 查课同学记录多个值and不同值差别小】 序号{t[hdr_data_df["序号"]]} {t[hdr_data_df["具体日期"]]} {t[hdr_data_df["节次"]]} {t[hdr_data_df["教室"]]} 选课{t[hdr_data_df["选课人数"]]} 到课{t[hdr_data_df["到课人数"]]} 合到课率{right_rate} 课程：{t[hdr_data_df["课程名称"]]}')
                                 else:
-                                    print(f'【合班（合到课率=分到课率）| 查课同学记录多个值and不同值差别小】 序号{t[0]} {t[11]} {t[13]} {t[14]} 选课{t[4]} 到课{t[15]} 合到课率{right_rate} 课程：{t[1]}')
+                                    print(f'【合班（合到课率=分到课率）| 查课同学记录多个值and不同值差别小】 序号{t[hdr_data_df["序号"]]} {t[hdr_data_df["具体日期"]]} {t[hdr_data_df["节次"]]} {t[hdr_data_df["教室"]]} 选课{t[hdr_data_df["选课人数"]]} 到课{t[hdr_data_df["到课人数"]]} 合到课率{right_rate} 课程：{t[hdr_data_df["课程名称"]]}')
                         #for t in special.values:
                         #    print('【合班，查课同学记录多个值，到课表中未更改】')
                         #    print(f'序号{t[0]} {t[11]} {t[13]} {t[14]} 课程：{t[1]} 选课{t[4]} 到课{t[15]}\n')
@@ -401,13 +404,13 @@ if __name__ == '__main__':
                                 right_rate = 1
                                 print('合班到课率超过1，已重新赋值为1：')
                         for t in special.values:
-                            if abs(right_rate - t[16]) > 0.0001:
+                            if abs(right_rate - t[hdr_data_df['到课率']]) > 0.0001:
                                 # print(f'{place} 合班问题 正确到课率：{right_rate}')
                                 # print(f'序号{t[0]} 日期{t[11]} 节次{t[13]} 教室{t[14]} 开课院系{t[2]} 课程{t[1]} 选课{t[4]} 到课{t[15]} 原到课率{t[16]}')
-                                data_df.loc[(data_df['序号'] == t[0]) & (data_df['具体日期'] == t[11]), '到课率'] = right_rate
-                                print(f'【合班（到课率已修正）| 查课同学记录一个值】 序号{t[0]} {t[11]} {t[13]} {t[14]} 选课{t[4]} 到课{t[15]} 合到课率{right_rate} 课程：{t[1]}')
+                                data_df.loc[(data_df['序号'] == t[hdr_data_df['序号']]) & (data_df['具体日期'] == t[hdr_data_df['具体日期']]), '到课率'] = right_rate
+                                print(f'【合班（到课率已修正）| 查课同学记录一个值】 序号{t[hdr_data_df["序号"]]} {t[hdr_data_df["具体日期"]]} {t[hdr_data_df["节次"]]} {t[hdr_data_df["教室"]]} 选课{t[hdr_data_df["选课人数"]]} 到课{t[hdr_data_df["到课人数"]]} 合到课率{right_rate} 课程：{t[hdr_data_df["课程名称"]]}')
                             else:
-                                print(f'【合班（合到课率=分到课率）| 查课同学记录一个值】 序号{t[0]} {t[11]} {t[13]} {t[14]} 选课{t[4]} 到课{t[15]} 合到课率{right_rate} 课程：{t[1]}')
+                                print(f'【合班（合到课率=分到课率）| 查课同学记录一个值】 序号{t[hdr_data_df["序号"]]} {t[hdr_data_df["具体日期"]]} {t[hdr_data_df["节次"]]} {t[hdr_data_df["教室"]]} 选课{t[hdr_data_df["选课人数"]]} 到课{t[hdr_data_df["到课人数"]]} 合到课率{right_rate} 课程：{t[hdr_data_df["课程名称"]]}')
 
     if save_pth == '':
         os.makedirs('%04d%02d%02d%s/%d月%d日榆中校区截图' %(y, m, d, place, m, d))
