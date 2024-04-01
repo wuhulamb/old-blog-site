@@ -1,12 +1,12 @@
 ---
-title:            "每日到课率整理@Python"
+title:            "每日到课率整理程序"
 author:           wuhulamb
 date:             2023-11-02 18:53:00 +0800
-modified_date:    2023-12-31 21:38:00 +0800
-my_category:         "教务处勤工助学"
+modified_date:    2024-04-01 12:00:00 +0800
+my_category:      "教务处勤工助学"
 ---
 
-> 本代码也适用于节假日等特殊情况，只需要保证输入的到课率数据为对应时间段的数据（eg. 昨天9-11节+今天1-8节）。
+> 本程序也适用于节假日等特殊情况，只需要保证输入的到课率数据为对应时间段的数据（eg. 昨天9-11节+今天1-8节）。
 
 ## 写给谁
 
@@ -18,17 +18,9 @@ my_category:         "教务处勤工助学"
 - 制作每日到课率表
 - 制作异常情况表 + 截图重命名
 
-## 代码下载
+## 程序下载
 
-- [nor-make.py](/media/download/nor-make.py)
-- [art-make.py](/media/download/art-make.py)
-
-> **注意**
-> 1. 本代码运行的Python版本为3.8.8，至少保证您的Python版本为3.x
-> 2. 需要安装的库:
->     - [numpy](https://pypi.org/project/numpy/)
->     - [openpyxl](https://pypi.org/project/openpyxl/)
->     - [pandas](https://pypi.org/project/pandas/)
+点击[data-make.exe](/media/download/data-make.exe)下载使用
 
 ## 开始使用
 
@@ -90,12 +82,12 @@ my_category:         "教务处勤工助学"
 
 ![cmd.png](/media/image/2023/11/cmd.png "cmd")
 
-#### （2）运行python程序
+#### （2）运行程序
 
-    python D:\xxx\xxx\nor-make.py  # 运行程序（后面为nor-make.py文件所在路径）
+    .\data-make.exe  # 运行程序
 
-![nor-make-start.png](/media/image/2023/11/nor-make-start.png "start")  
-*此处以nor-make.py为例，art-make.py同理*
+![data-make.png](/media/image/2024/04/data-make.png "start")  
+*选择闻韶楼 or 天山堂/秦岭堂*
 
 ### 3. 输入选项
 
