@@ -2,7 +2,7 @@
 title:            "每日到课率整理程序"
 author:           wuhulamb
 date:             2023-11-02 18:53:00 +0800
-modified_date:    2024-04-01 12:00:00 +0800
+modified_date:    2024-04-01 14:50:00 +0800
 my_category:      "教务处勤工助学"
 ---
 
@@ -20,7 +20,13 @@ my_category:      "教务处勤工助学"
 
 ## 程序下载
 
-点击[data-make.exe](/media/download/data-make.exe)下载使用
+点击 :point_right: [data-make.exe](/media/download/data-make.exe) 下载使用
+
+**如果下载被浏览器拦截**
+
+![download-data-make1.png](/media/image/2024/04/download-data-make1.png)
+
+![download-data-make2.png](/media/image/2024/04/download-data-make2.png)
 
 ## 开始使用
 
