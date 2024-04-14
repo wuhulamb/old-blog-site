@@ -18,6 +18,6 @@ title:  "分类"
     {%- endif -%}
   {% endfor %}
   <h3>
-    <a href="{{ c.url }}">{{ c.title }}（{{ my_counter }}）</a>
+    <a href="{{ c.url | relative_url }}">{{ c.title }}（{{ my_counter }}）</a>
   </h3>
 {% endfor %}
