@@ -11,7 +11,7 @@ my_category:         "翻译"
 
 理查德·费曼教给了我们一个有助于提高效率的宝藏学习法。了解著名的费曼学习法，然后更加高效地学习吧！
 
-![the-feynman-technique-ideas.webp](/media/image/2024/02/the-feynman-technique-ideas.webp)  
+![the-feynman-technique-ideas.webp]({{ 'media/image/2024/02/the-feynman-technique-ideas.webp' | relative_url }})  
 将你的想法写下来，这会帮助你思考，让你可以发现自己的知识盲区
 
 在本篇文章中，我会介绍著名的费曼学习法——一个由[理查德·费曼](https://en.wikipedia.org/wiki/Richard_Feynman)创造并使用的学习方法和思维模型[^1]。
